@@ -35,7 +35,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
                 api = await resp.json()
                 if resp.status in {200, 201}:
                     url = api['images'][0]['url']
-                    e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                    e = discord.Embed(
+                        color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                     e.set_image(url='{}'.format(url))
                     await ctx.send(embed=e)
                 else:
@@ -54,7 +55,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -73,7 +75,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -92,7 +95,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -111,7 +115,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -130,7 +135,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -149,7 +155,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -168,7 +175,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -187,7 +195,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -206,7 +215,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -226,7 +236,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -246,7 +257,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -266,7 +278,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -286,7 +299,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -306,7 +320,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -326,7 +341,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -346,7 +362,8 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -355,6 +372,326 @@ class Waifu(commands.Cog, name='Waifu Commands'):
                 e.set_description('```js\n{}\n```'.format(error))
                 await ctx.send(embed=e)
 
+    @_oral.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _oral_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=oral' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_hentai.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _hentai_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=hentai' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+    
+    @_ass.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _ass_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=ass' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_milf.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _milf_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=milf' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_ecchi.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _ecchi_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=ecchi' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_ero.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _ero_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=ero' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_paizuri.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _paizuri_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=paizuri' \
+            '&is_nsfw=true' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_random.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _random_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_maid.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _maid_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=maid' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_oppai.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _oppai_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=oppai' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_uniform.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _unifoirm_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=uniform' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_selfies.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _selfies_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=selfies' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_raiden_shogun.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _raiden_shogun_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=raiden-shogun' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_mori_calliope.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _mori_calliope_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=mori-calliope' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
+
+    @_marin_kitagawa.command(name='gif', description='Return a gif of the selected tag', command_attrs=command_attrs)
+    @commands.has_guild_permissions(send_messages=True)
+    async def _marin_kitagawa_gif(self, ctx):
+        if ctx.author.id == self.client.user.id:
+            return
+        url = 'https://api.waifu.im/random/?included_tags=marin-kitagawa' \
+            '&gif=true'
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(
+                    color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
 
 def setup(client):
     client.add_cog(Waifu(client))
