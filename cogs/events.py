@@ -27,9 +27,6 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
 
-    @commands.Cog.listener()
-    async def on_command_error(self, ctx, error):
-
         error_message = '\⛔ {}'.format(error.args[0])
 
         if isinstance(error, commands.errors.NSFWChannelRequired):
