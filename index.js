@@ -22,6 +22,6 @@ client.commands = new Collection();
 client.aliases = new Collection();
 client.SlashCommands = new Collection();
 
-import './Handler/handler.js';
+import './Handler/handler.cjs';
 
 client.login(process.env.TOKEN)
