@@ -1,8 +1,9 @@
-import { Client } from "discord.js";
-import { glob } from "glob";
+const { Client } = require('discord.js');
+const { glob } = require('glob');
+const { promisify } = require('util');
+const globPromise = promisify(glob);
+require('./esmRequire.js'); // Importing ES Modules in CJS
 import chalk from "chalk";
-import { promisify } from "util";
-import globPromise from promisify(glob);
 
 /**
  * @param {Client} client

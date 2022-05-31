@@ -1,8 +1,14 @@
-import chalk from "chalk";
-import { client, MessageEmbed, inspect } from '../imports.cjs';
+const client = require("../index.js"); // Importing Client from Index.js
+require('./esmRequire.js'); // Importing ES Modules in CJS
+import chalk from "chalk"; // Importing Chalk from Chalk
+const {
+    MessageEmbed
+} = require('discord.js') // Importing MessageEmbed from Discord.js
+const {
+    inspect
+} = require("util")
 
 client.on('error', err => {
-
     const a = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[ERROR]——————————\n') + err
@@ -19,7 +25,6 @@ client.on('error', err => {
     })
 });
 process.on("unhandledRejection", (reason, p) => {
-
     const b = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Unhandled Rejection/Catch]——————————\n'),
@@ -38,7 +43,6 @@ process.on("unhandledRejection", (reason, p) => {
     })
 });
 process.on("uncaughtException", (err, origin) => {
-
     const c = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Uncaught Exception/Catch]——————————\n'),
@@ -57,7 +61,6 @@ process.on("uncaughtException", (err, origin) => {
     })
 });
 process.on("uncaughtExceptionMonitor", (err, origin) => {
-
     const d = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Uncaught Exception/Catch (MONITOR)]——————————\n'),
@@ -77,7 +80,6 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
     })
 });
 process.on("multipleResolves", (type, promise, reason) => {
-
     const e = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Multiple Resolves]——————————\n'),
@@ -97,7 +99,6 @@ process.on("multipleResolves", (type, promise, reason) => {
     })
 });
 process.on("warning", (warn) => {
-
     const f = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Warning]——————————\n'),

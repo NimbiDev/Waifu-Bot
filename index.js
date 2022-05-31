@@ -1,9 +1,11 @@
 require('dotenv').config;
+require('./esmRequire.js');
 
 const {
     Collection,
     Client
-} = require('discord.js');
+} = require("discord.js");
+
 
 const client = new Client({
     allowedMentions: {
@@ -13,12 +15,13 @@ const client = new Client({
     intents: 513,
 });
 
+
 module.exports = client;
 
 client.commands = new Collection();
 client.aliases = new Collection();
 client.SlashCommands = new Collection();
 
-import Handler from "./imports.cjs"
+require('./Handler/handler')(client);
 
 client.login(process.env.TOKEN)

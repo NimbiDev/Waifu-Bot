@@ -1,26 +1,25 @@
-const prefix = process.env.PREFIX
-
-import client from '../imports.cjs';
-import chalk from "chalk";
-
+require('./esmRequire.js'); // Importing ES Modules in CJS
+import chalk from "chalk"; // Importing chalk from chalk
+const prefix = process.env.PREFIX // Getting the Prefix
+const client = require("../index.js"); // Importing Client from Index.js
 const {
     dependencies
-} = require('../package.json');
-const ver = dependencies['discord.js'];
-const mongooseConnectionString = process.env.MONGO_CONNECTION_URL;
+} = require('../package.json'); // Requiring dependencies from package.json
+const ver = dependencies['discord.js']; // Getting the Version of Discord.js
+const mongooseConnectionString = process.env.MONGO_CONNECTION_URL; // Mongo Connection String
 const {
     connect
-} = require('mongoose');
+} = require('mongoose'); // Getting Connect from Mongoose
 
 client.on("ready", async () => {
-
+    // Presence
     setInterval(() => {
         client.user.setPresence({
             activities: [{
-                name: `${client.guilds.cache.size} Servers!`,
-                type: 'WATCHING'
+                name: `${client.guilds.cache.size} Servers!`, // Status will show how many server the bot is in
+                type: 'WATCHING' // You change it to "STREAMING" or "PLAYING" or "LISTENING"
             }],
-            status: 'online'
+            status: 'online' // Bot status
         });
     }, 60000)
 
