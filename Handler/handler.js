@@ -2,7 +2,6 @@ const { Client } = require('discord.js');
 const { glob } = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
-require('../esmRequire.js');
 const chalk = require('chalk');
 
 /**

@@ -1,5 +1,4 @@
 require('dotenv').config;
-require('./esmRequire.js');
 
 const {
     Collection,
