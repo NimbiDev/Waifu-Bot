@@ -12,7 +12,6 @@ class Utility(commands.Cog, name='Utility Commands'):
 
     @commands.command(name='ping', aliases=['echo', 'beep'], description='Returns the bot\'s latency.\n\n**Example**: {}ping'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
-    @commands.cooldown(1, 10, commands.BucketType.user)
     async def _ping(self, ctx):
         client = self.client
         if round(client.latency * 1000) <= 50:

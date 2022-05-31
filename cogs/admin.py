@@ -11,7 +11,6 @@ class Admin(commands.Cog, name='Administrator Commands'):
 
     @commands.command(name="purge", aliases=['prune', 'clean', 'delete'], description='Delete a specified number of messeges from the channel.\n\n**Example**: `{}purge 25`'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_permissions(manage_messages=True)
-    @commands.cooldown(1, 10, commands.BucketType.user)
     async def purge(self, ctx, amount: int):
         await ctx.message.delete()
         deleted = await ctx.channel.purge(limit=amount)
@@ -23,7 +22,6 @@ class Admin(commands.Cog, name='Administrator Commands'):
         
     @commands.command(name="ban", description='Ban a member form the guild for a specified reason.\n\n**Example**: {}ban @JohnDoe Harrassment'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_permissions(ban_members=True)
-    @commands.cooldown(1, 10, commands.BucketType.user)
     async def _ban (self, ctx, member:discord.User=None, reason =None):
         if member == None or member == ctx.author:
             await ctx.send("\⛔ You cannot ban yourself")
@@ -38,7 +36,6 @@ class Admin(commands.Cog, name='Administrator Commands'):
         
     @commands.command(name='unban', description='Unban a member from the guild.\n\n**Example**: {}unban JohnDoe#0000'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_permissions(ban_members=True)
-    @commands.cooldown(1, 10, commands.BucketType.user)
     async def _unban(self, ctx, *, member):
         banned_users = await ctx.guild.bans()
         member_name, member_discriminator = member.split("#")

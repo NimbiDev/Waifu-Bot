@@ -16,7 +16,6 @@ class Fun(commands.Cog, name='Fun Commands'):
         self.client = client    
     @commands.command(name='guess', description='A simple guessing game.\n\n**Example**: {}guess'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
-    @commands.cooldown(1, 10, commands.BucketType.user)
     async def _guess(self, ctx):
         if ctx.author.id == self.client.user.id:
             return
