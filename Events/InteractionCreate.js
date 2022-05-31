@@ -1,7 +1,6 @@
-const client = require('../index.js'); // Importing Client from Index.js
-const {
-    owners
-} = require('../json/owners.json'); // Getting the owner ids
+import client from '../index.js'; 
+import { owners } from '../json/owners.json';
+import { developers } from '../json/developers.json';
 
 client.on("interactionCreate", async (interaction) => {
 

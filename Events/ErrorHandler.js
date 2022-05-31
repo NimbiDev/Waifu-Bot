@@ -1,12 +1,8 @@
-const client = require("../index.js"); // Importing Client from Index.js
-const chalk = require('chalk');
+import client from '../index.js'; 
+import chalk from 'chalk';
 
-const {
-    MessageEmbed
-} = require('discord.js') // Importing MessageEmbed from Discord.js
-const {
-    inspect
-} = require("util")
+import { MessageEmbed } from 'discord.js';
+import { inspect } from "util";
 
 client.on('error', err => {
     const a = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
