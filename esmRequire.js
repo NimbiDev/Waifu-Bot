@@ -2,7 +2,7 @@
  * @file import compiled ES modules as a workaround
  */
 
- const chalk = require('chalk')
+ const esm = require('esm')
  const fs = require('fs')
  const Module = require('module')
  

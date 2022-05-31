@@ -3,6 +3,7 @@ const { glob } = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
 require('./esmRequire.js');
+import chalk from "chalk";
 
 /**
  * @param {Client} client

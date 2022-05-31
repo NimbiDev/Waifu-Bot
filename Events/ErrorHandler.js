@@ -1,5 +1,6 @@
 const client = require("../index.js"); // Importing Client from Index.js
 require('./esmRequire.js');
+import chalk from "chalk";
 
 const {
     MessageEmbed
