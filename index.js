@@ -1,6 +1,7 @@
 const Cluster = require("discord-hybrid-sharding");
 const { Collection, Client } = require("discord.js");
 
+
 const client = new Client({
     shards: Cluster.data.SHARD_LIST,
     shardCount: Cluster.data.TOTAL_SHARDS,
