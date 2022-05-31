@@ -1,9 +1,9 @@
+import { config } from "dotenv";
+config({ path: process.ENV })
 
-require("dotenv").config();
-
-const { 
-    Collection, 
-    Client 
+const {
+    Collection,
+    Client
 } = require("discord.js");
 
 const client = new Client({
