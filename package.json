@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/Socket-Development/waifu-bot#README.md",
   "engines": {
-    "node": "^18.2.0"
+    "node": "^16.13.1"
   },
   "dependencies": {
     "chalk": "^4.1.2",
