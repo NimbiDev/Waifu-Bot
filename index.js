@@ -7,7 +7,7 @@ const client = new Client({
         repliedUser: true,
         parse: ["users", "roles", "everyone"]
     },
-    intents: 512,
+    intents: 513,
 });
 
 
