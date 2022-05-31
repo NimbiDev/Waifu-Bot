@@ -1,0 +1,46 @@
+{
+  "name": "waifu.im",
+  "description": "Waifu Discord bot using waifu.im api",
+  "version": "0.0.0.0",
+  "main": "cluster.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon cluster.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "keywords": [
+    "waifu.im",
+    "discordapp",
+    "bot",
+    "images",
+    "profiles",
+    "levelling"
+  ],
+  "license": "MIT",
+  "author": "Socket Development <github.com/Socket-Development",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Socket-Development/waifu-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/Socket-Development/waifu-bot/issues"
+  },
+  "homepage": "https://github.com/Socket-Development/waifu-bot#README.md",
+  "engines": {
+    "node": "^18.2.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "glob": "^7.2.0",
+    "mongoose": "^6.2.0",
+    "discord-hybrid-sharding": "^1.5.3"
+  },
+  "devDependencies": {
+    "chalk": "^5.0.1",
+    "eslint": "^8.16.0",
+    "lint": "^0.7.0"
+  }
+}

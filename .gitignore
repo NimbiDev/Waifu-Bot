@@ -1,0 +1,16 @@
+# Directories
+.vscode/*
+node_modules/*
+pyenv/*
+env/*
+
+# Configuration Files
+.env
+config.json
+
+# Lock Files
+package-lock.json
+
+# Log Files
+*-stdout.log
+*-stderr.log
