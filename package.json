@@ -2,8 +2,7 @@
   "name": "waifu.im",
   "description": "Waifu Discord bot using waifu.im api",
   "version": "0.0.0.0",
-  "type": "module",
-  "mexports": "./index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon index.js",
