@@ -1,13 +1,13 @@
 import { Client } from 'discord.js';
 import glob from 'glob';
 import promisify from 'util';
-const globPromise = promisify(glob);
 import chalk from 'chalk';
 /**
  * @param {Client} client
  */
 
 export default async (client) => {
+    const globPromise = promisify(glob);
     const slashCommands = [];
     const SlashCommandsFiles = await globPromise(`${process.cwd()}/slashCommands/*/*.js`);
     SlashCommandsFiles.map(async (path) => {
