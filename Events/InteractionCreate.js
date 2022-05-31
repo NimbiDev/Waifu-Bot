@@ -1,25 +1,21 @@
-import client from '../index.js'; 
+import client from '../index.js';
 import { owners } from '../json/owners.json';
 import { developers } from '../json/developers.json';
 
 client.on("interactionCreate", async (interaction) => {
 
-    // Slash Commands
     if (interaction.isCommand()) {
         const command = client.SlashCommands.get(interaction.commandName);
-        // If Command Doesnt exist
         if (!command) return interaction.reply({
             content: "An Error has occurred!",
             ephemeral: true
         }) && client.SlashCommands.delete(interaction.commandName)
 
-        // User Permissions Check
         if (!interaction.member.permissions.has(command.userPermissions || [])) return interaction.reply({
             content: `${process.env.FAILURE_EMOJI} You need \`${command.userPermissions || []}\` permissions to run this command`,
             ephemeral: true,
         });
 
-        // Under Maintenance Commands
         if (command.maintenance) {
             if (!owners.includes(interaction.user.id)) {
                 return interaction.reply({
@@ -28,14 +24,12 @@ client.on("interactionCreate", async (interaction) => {
             }
         }
 
-        // Bot Permissions Check
         if (!interaction.guild.me.permissions.has(command.botPermissions || []))
             return interaction.reply({
                 content: `${process.env.FAILURE_EMOJI} I need \`${cmd.botPermissions || []}\` permissions to run this command`,
                 ephemeral: true
             });
 
-        // Owner Only Commands
         if (command.ownerOnly) {
             if (!owners.includes(interaction.user.id)) {
                 return interaction.reply({
@@ -44,10 +38,9 @@ client.on("interactionCreate", async (interaction) => {
             }
         };
 
-        command.run(client, interaction); // Running the command
+        command.run(client, interaction);
     }
 
-    // Context Menu
     if (interaction.isContextMenu()) {
         const command = client.SlashCommands.get(interaction.commandName);
         if (command) command.run(client, interaction);

@@ -1,6 +1,5 @@
 import client from '../index.js'; 
 import chalk from 'chalk';
-
 import { MessageEmbed } from 'discord.js';
 import { inspect } from "util";
 

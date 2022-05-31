@@ -1,30 +1,28 @@
-const chalk = require('chalk');
-const prefix = process.env.PREFIX // Getting the Prefix
-const client = require("../index.js"); // Importing Client from Index.js
-const {
-    dependencies
-} = require('../package.json'); // Requiring dependencies from package.json
-const ver = dependencies['discord.js']; // Getting the Version of Discord.js
-const mongooseConnectionString = process.env.MONGO_CONNECTION_URL; // Mongo Connection String
-const {
-    connect
-} = require('mongoose'); // Getting Connect from Mongoose
+import chalk from 'chalk';
+import client from '../index.js';
+import { dependencies } from '../package.json';
+
+const ver = dependencies['discord.js'];
+const mongooseConnectionString = process.env.MONGO_CONNECTION_URL;
+
+import { connect } from 'mongoose';
 
 client.on("ready", async () => {
-    // Presence
     setInterval(() => {
         client.user.setPresence({
             activities: [{
-                name: `${client.guilds.cache.size} Servers!`, // Status will show how many server the bot is in
-                type: 'WATCHING' // You change it to "STREAMING" or "PLAYING" or "LISTENING"
+                name: `${client.guilds.cache.size} Servers!`,
+                type: 'WATCHING'
             }],
-            status: 'online' // Bot status
+            status: 'online'
         });
     }, 60000)
 
     console.clear();
     console.log("")
-    console.log(chalk.red.bold("——————————[Basic Info]——————————"))
+    console.log(
+        chalk.red.bold("——————————[Basic Info]——————————")
+    )
     console.log(
         chalk.white(`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0) > 1 ? "Users:" : "User:"}`),
         chalk.red(`${client.guilds.cache.reduce((a, b) => a + b.memberCount, 0)}`),
@@ -33,16 +31,8 @@ client.on("ready", async () => {
         chalk.red(`${client.guilds.cache.size}`),
     )
     console.log(
-        chalk.white(`Prefix:` + chalk.red(` ${prefix}`) + chalk.white(' & ') + chalk.red(' /')),
-        chalk.white("||"),
         chalk.white(`Slash Commands:`),
-        chalk.red(`${client.SlashCommands.size}`),
-        chalk.white("& Message Commands:"),
-        chalk.red(`${client.commands.size}`),
-    )
-    console.log(
-        chalk.white("Total Commands:"),
-        chalk.red(`${client.commands.size + client.SlashCommands.size}`),
+        chalk.red(`${client.SlashCommands.size}`)
     )
 
     console.log("")
@@ -68,7 +58,16 @@ client.on("ready", async () => {
         chalk.green(ver)
     )
     console.log("")
-    console.log(chalk.red.bold("——————————[Connections]——————————"))
-    console.log(chalk.white("✅ Successfully Connected To"), chalk.red(`${client.user.tag}`), chalk.white('('), chalk.green(client.user.id), chalk.white(')'))
-    connect(mongooseConnectionString, {}).then(console.log(chalk.white("✅ Successfully Connected To"), chalk.red(`Mongoose Data Base`)))
+    console.log(
+        chalk.red.bold("——————————[Connections]——————————")
+    )
+    console.log(
+        chalk.white("✅ Successfully Connected To"),
+        chalk.red(`${client.user.tag}`),
+        chalk.white('('),
+        chalk.green(client.user.id),
+        chalk.white(')'))
+    connect(mongooseConnectionString, {})
+        .then(console.log(chalk.white("✅ Successfully Connected To"),
+            chalk.red(`Mongoose Data Base`)))
 })
