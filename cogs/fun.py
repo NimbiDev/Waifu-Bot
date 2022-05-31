@@ -3,6 +3,8 @@ import discord
 import os
 import asyncio
 import random
+import aiohttp
+
 
 from config import BLUE, EMBED_THUMBNAIL, PREFIX, RED, GREEN
 from discord.ext import commands
@@ -11,9 +13,7 @@ command_attrs = {'hidden': False}
 
 class Fun(commands.Cog, name='Fun Commands'):
     def __init__(self, client):
-        self.client = client
-    
-    
+        self.client = client    
     @commands.command(name='guess', description='A simple guessing game.\n\n**Example**: {}guess'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     @commands.cooldown(1, 10, commands.BucketType.user)
