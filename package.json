@@ -7,7 +7,7 @@
     "start": "node .",
     "dev": "nodemon cluster.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "eslint": "eslint ."
   },
   "keywords": [
     "waifu.im",
@@ -40,7 +40,6 @@
   },
   "devDependencies": {
     "chalk": "^5.0.1",
-    "eslint": "^8.16.0",
-    "lint": "^0.7.0"
+    "eslint": "^8.16.0"
   }
 }
