@@ -15,12 +15,8 @@ const client = new Client({
     intents: 513,
 });
 
-
-client.module.exports = client;
-
-client.commands = new Collection();
-client.aliases = new Collection();
-client.SlashCommands = new Collection();
+export default
+    client.SlashCommands = new Collection();
 
 import './Handler/handler.js';
 
