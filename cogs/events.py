@@ -3,7 +3,7 @@ import os
 import logging
 import chalk
 
-from config import DARKRED, PREFIX
+from config import DARKRED, PREFIX, RED
 from discord.ext import commands
 
 
@@ -14,9 +14,11 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
     @commands.Cog.listener()
     async def on_ready(self):
         c = self.client
-        print(chalk.white('-------------------------------------------------------------'))
+        print(chalk.white(
+            '-------------------------------------------------------------'))
         print(chalk.green('>>| Logged in as {} (ID: {})'.format(c.user, c.user.id)))
-        print(chalk.white('-------------------------------------------------------------'))
+        print(chalk.white(
+            '-------------------------------------------------------------'))
 
     @commands.Cog.listener()
     async def on_messege_delete(self, ctx, messege):
@@ -24,9 +26,23 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
 
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
-        
-        error_message = '\⛔ {}'.format(error)
-        
+
+    @commands.Cog.listener()
+    async def on_command_error(self, ctx, error):
+
+        error_message = '\⛔ {}'.format(error.args[0])
+
+        if isinstance(error, commands.errors.NSFWChannelRequired):
+            e = discord.Embed(
+                title="NSFW Command",
+                description=error_message,
+                color=DARKRED
+            )
+        await ctx.send(
+            embed=e,
+            mention_author=False
+        )
+
         if isinstance(error, commands.CommandNotFound):
             return
         else:
@@ -38,7 +54,7 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
             print(chalk.yellow(f'>>| {error}'))
             # Uncommit the below line when debugging
             # raise error
-        
-        
+
+
 def setup(client):
     client.add_cog(Events(client))
