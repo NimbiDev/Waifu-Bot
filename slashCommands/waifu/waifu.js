@@ -1,6 +1,6 @@
 import { Client, CommandInteraction, MessageEmbed } from "discord.js";
 
-export default  module.exports = {
+export default  {
     name: 'waifu',
     description: 'Get a waifu from waifu.im with an optional tag. eg: /waifu maid',
     /** 

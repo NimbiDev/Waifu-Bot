@@ -15,7 +15,7 @@ const client = new Client({
     intents: 513,
 });
 
-export default module.exports = client;
+export default client;
 
 client.SlashCommands = new Collection();
 

@@ -6,7 +6,7 @@ import chalk from 'chalk';
  * @param {Client} client
  */
 
-export default module.exports = async (client) => {
+export default async (client) => {
     const globPromise = promisify(glob);
     const LegacyCommands = await globPromise(`${process.cwd()}/commands/*/*.js`);
     LegacyCommands.map(async (path) => {

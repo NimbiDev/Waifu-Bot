@@ -5,7 +5,7 @@ import {
     MessageEmbed
 } from 'discord.js';
 
-export default module.exports = {
+export default {
     name: 'ping',
     description: 'Check Bots ping',
     /**

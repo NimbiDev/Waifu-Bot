@@ -1,9 +1,10 @@
-import chalk from 'chalk';
-import client from '../index.js';
-import { dependencies } from '../package.json';
+import chalk from 'chalk'; // Importing chalk from chalk
+import client from '../index.js'; // Importing Client from Index.js
+import { dependencies } from '../package.json'; // Importing dependencies from package.json
 
-const ver = dependencies['discord.js'];
-const mongooseConnectionString = process.env.MONGO_CONNECTION_URL;
+const prefix = process.env.PREFIX // Getting the Prefix
+const ver = dependencies['discord.js']; // Getting the Version of Discord.js
+const mongooseConnectionString = process.env.MONGO_CONNECTION_URL; // Mongo Connection String
 
 import { connect } from 'mongoose';
 

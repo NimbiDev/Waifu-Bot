@@ -5,7 +5,7 @@ import {
     MessageEmbed
 } from 'discord.js';
 
-export default module.exports = {
+export default {
     name: 'uptime',
     description: 'Check Bots uptime',
     /**
