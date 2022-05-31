@@ -1,4 +1,4 @@
-import { config } from "dotenv"
+import dotenv from "dotenv"
 dotenv.config();
 
 import {
@@ -15,14 +15,13 @@ const client = new Client({
     intents: 513,
 });
 
-
-import client from './Handler/handler';
-
 module.exports = client;
 
 client.commands = new Collection();
 client.aliases = new Collection();
 client.SlashCommands = new Collection();
+
+import './Handler/handler';
 
 
 client.login(process.env.TOKEN)

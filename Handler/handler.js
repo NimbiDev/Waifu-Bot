@@ -1,8 +1,8 @@
 import { Client } from "discord.js";
 import { glob } from "glob";
 import chalk from "chalk";
-const { promisify } = require('util');
-const globPromise = promisify(glob);
+import { promisify } from "util";
+import globPromise from promisify(glob);
 
 /**
  * @param {Client} client
