@@ -24,7 +24,7 @@ class Images(commands.Cog, name='Image Commands'):
     def cog_unload(self):
         self.client.loop.create_task(self.session.close())
     
-    @commands.command(aliases=['t'], name='tenor', description='Return a random gif by tag from tenor.\nSeperate multiple tags with `+`.\n\n**Example**: `{}tenor anime+hug`'.format(PREFIX), command_attrs=command_attrs)
+    @commands.command(name='tenor', description='Return a random gif by tag from tenor.\nSeperate multiple tags with `+`.\n\n**Example**: `{}tenor anime+hug`'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True, embed_links=True)
     async def _tenor(self, ctx, *, tag):
         tenorUrl = await TENOR.arandom(str(tag))

@@ -1,17 +1,13 @@
 from distutils.log import error
 import discord
 import aiohttp
-import TenGiphPy
 
 import random
 import json
 
-
-from config import BLUE, EMBED_THUMBNAIL, PREFIX, RED, GREEN, PREFIX, RANDOM, TENOR_API
+from config import BLUE, PREFIX, RED, PREFIX
 from discord.ext import commands
 
-TOKENS = {'TENOR_API': TENOR_API}
-TENOR = TenGiphPy.Tenor(token=TOKENS['TENOR_API'])
 
 HEADERS = {'User-Agent': f'aiohttp/{aiohttp.__version__}; Waifu-Bot'}
 
@@ -72,7 +68,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
     async def _maid(self, ctx):
         if ctx.author.id == self.client.user.id:
             return
-        url = 'https://api.waifu.im/random/?gif=true'
+        url = 'https://api.waifu.im/random/?included_tags=maid'
         async with self.session.get(url, headers=HEADERS) as resp:
             api = await resp.json()
             if resp.status in {200, 201}:
@@ -124,7 +120,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
                 e.set_description('```js\n{}\n```'.format(error))
                 await ctx.send(embed=e)
 
-    @_waifu.command(name='gif', description='Get an Oppai image from waifu.im.', command_attrs=command_attrs)
+    @_waifu.command(name='oppai', description='Get an Oppai image from waifu.im.', command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     async def _oppai(self, ctx):
         if ctx.author.id == self.client.user.id:
