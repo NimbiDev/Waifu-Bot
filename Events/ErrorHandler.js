@@ -1,5 +1,5 @@
 const client = require("../index.js"); // Importing Client from Index.js
-require('./esmRequire.js');
+require('../esmRequire.js');
 const chalk = require('chalk');
 
 const {

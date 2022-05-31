@@ -1,5 +1,5 @@
 
-require('./esmRequire.js');
+require('../esmRequire.js');
 const chalk = require('chalk');
 const prefix = process.env.PREFIX // Getting the Prefix
 const client = require("../index.js"); // Importing Client from Index.js
