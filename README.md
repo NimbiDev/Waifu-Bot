@@ -4,7 +4,7 @@ Waifu Discord bot using waifu.im api
 ## Commands
 The `[]` flasg represent **OPTIONAL** arguements.<br />
 The `<>` flags represent **REQUIRED** arguments. <br />
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| --------------------- | 
 | Command               | Description                                                                                                               | Usage                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | waifu | Get a random waifu from waifu.im | /waifu [tag] |
@@ -16,4 +16,3 @@ The `<>` flags represent **REQUIRED** arguments. <br />
 | shop | Display the guild shop, or buy useful items from the guild shop | /shop [item] |
 | daily | Collect your daily Waifu Tokens | /daily |
 | battle | Battle your waifu against other guild members and build up your waifu's respect | /battle [@user] |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
