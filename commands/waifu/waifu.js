@@ -4,6 +4,7 @@ const {
     String,
     MessageEmbed
 } = require('discord.js');
+const { fetch } = require('fetch');
 
 
 module.exports = {

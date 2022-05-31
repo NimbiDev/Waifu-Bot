@@ -16,8 +16,8 @@ client.on('error', err => {
         .setTitle('Error')
         .setURL('https://discordjs.guide/popular-topics/errors.html#api-errors')
         .setColor('#2F3136')
-        .setDescription(`\`\`\`${inspect(error, {depth: 0})}\`\`\``)
-        
+        .setDescription('```js\n' + inspect(error, { depth: 0 }) +  '\n```')
+
         .setTimestamp()
     return a.send({
         embeds: [ErrorEmbed]
@@ -33,9 +33,9 @@ process.on("unhandledRejection", (reason, p) => {
         .setTitle('Unhandled Rejection/Catch')
         .setURL('https://nodejs.org/api/process.html#event-unhandledrejection')
         .setColor('#2F3136')
-        .addField('Reason', `\`\`\`${inspect(reason, { depth: 0 })}\`\`\``.substring(0, 1000))
-        .addField('Promise', `\`\`\`${inspect(p, { depth: 0 })}\`\`\``.substring(0, 1000))
-        
+        .addField('Reason', '```js\n' + inspect(reason, { depth: 0 }) +  '\n```'.substring(0, 1000))
+        .addField('Promise', '```js\n' + inspect(p, { depth: 0 }) +  '\n```'.substring(0, 1000))
+
         .setTimestamp()
     return b.send({
         embeds: [unhandledRejectionEmbed]
@@ -51,9 +51,9 @@ process.on("uncaughtException", (err, origin) => {
         .setTitle('Uncaught Exception/Catch')
         .setColor('#2F3136')
         .setURL('https://nodejs.org/api/process.html#event-uncaughtexception')
-        .addField('Error', `\`\`\`${inspect(err, { depth: 0 })}\`\`\``.substring(0, 1000))
-        .addField('Origin', `\`\`\`${inspect(origin, { depth: 0 })}\`\`\``.substring(0, 1000))
-        
+        .addField('Error', '```js\n' + inspect(err, { depth: 0 }) +  '\n```'.substring(0, 1000))
+        .addField('Origin', '```js\n' + inspect(origin, { depth: 0 }) +  '\n```'.substring(0, 1000))
+
         .setTimestamp()
     return c.send({
         embeds: [uncaughtExceptionEmbed]
@@ -69,9 +69,9 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
         .setTitle('Uncaught Exception Monitor')
         .setColor('#2F3136')
         .setURL('https://nodejs.org/api/process.html#event-uncaughtexceptionmonitor')
-        .addField('Error', `\`\`\`${inspect(err, { depth: 0 })}\`\`\``.substring(0, 1000))
-        .addField('Origin', `\`\`\`${inspect(origin, { depth: 0 })}\`\`\``.substring(0, 1000))
-        
+        .addField('Error', '```js\n' + inspect(err, { depth: 0 }) +  '\n```'.substring(0, 1000))
+        .addField('Origin', '```js\n' + inspect(origin, { depth: 0 }) +  '\n```'.substring(0, 1000))
+
         .setTimestamp()
 
     return d.send({
@@ -88,10 +88,10 @@ process.on("multipleResolves", (type, promise, reason) => {
         .setTitle('Multiple Resolves')
         .setURL('https://nodejs.org/api/process.html#event-multipleresolves')
         .setColor('#2F3136')
-        .addField('Type', `\`\`\`${inspect(type, { depth: 0 })}\`\`\``.substring(0, 1000))
-        .addField('Promise', `\`\`\`${inspect(promise, { depth: 0 })}\`\`\``.substring(0, 1000))
-        .addField('Reason', `\`\`\`${inspect(reason, { depth: 0 })}\`\`\``.substring(0, 1000))
-        
+        .addField('Type', '```js\n' + inspect(type, { depth: 0 }) + '\n```'.substring(0, 1000))
+        .addField('Promise', '```js\n' + inspect(promise, { depth: 0 }) + '\n```'.substring(0, 1000))
+        .addField('Reason', '```js\n' + inspect(reason, { depth: 0 }) + '\n```'.substring(0, 1000))
+
         .setTimestamp()
     return e.send({
         embeds: [multipleResolvesEmbed]
@@ -107,8 +107,8 @@ process.on("warning", (warn) => {
         .setTitle('Warning')
         .setColor('#2F3136')
         .setURL('https://nodejs.org/api/process.html#event-warning')
-        .addField('Warn', `\`\`\`${inspect(warn, { depth: 0 })}\`\`\``.substring(0, 1000))
-        
+        .addField('Warn', '```js\n' + inspect(warn, { depth: 0 }) + '\n```'.substring(0, 1000))
+
         .setTimestamp()
     return f.send({
         embeds: [warningEmbed]
