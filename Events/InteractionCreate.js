@@ -1,4 +1,4 @@
-const client = require('../index');
+const client = require('../index.cjs');
 const {
     owners
 } = require('../json/owners.json');

@@ -1,5 +1,5 @@
 import chalk from "chalk";
-const client = require("../index");
+const client = require("../index.cjs");
 
 const {
     MessageEmbed
