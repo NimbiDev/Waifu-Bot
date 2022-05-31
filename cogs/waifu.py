@@ -1,8 +1,13 @@
+from distutils.log import error
 import discord
 import aiohttp
 
-from config import BLUE, PREFIX, RED
+import random
+import json
+
+from config import BLUE, PREFIX, RED, PREFIX
 from discord.ext import commands
+
 
 HEADERS = {'User-Agent': f'aiohttp/{aiohttp.__version__}; Waifu-Bot'}
 
@@ -17,7 +22,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
     def cog_unload(self):
         self.client.loop.create_task(self.session.close())
 
-    @commands.group(name='waifu', description='Get a waifu image from waifu.im.\n\n**Usage**: `{}waifu [subcommand]`'.format(PREFIX), command_attrs=command_attrs)
+    @commands.group(name='waifu', description='Get a waifu image from waifu.im.\n\n**Usage**: `w.waifu [subcommand]`', command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     async def _waifu(self, ctx):
         if ctx.author.id == self.client.user.id:
@@ -30,9 +35,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
                 api = await resp.json()
                 if resp.status in {200, 201}:
                     url = api['images'][0]['url']
-                    e = discord.Embed(color=BLUE)
-                    e.set_description(
-                        '**Direct Link**: [waifu.im]({})'.format(url))
+                    e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                     e.set_image(url='{}'.format(url))
                     await ctx.send(embed=e)
                 else:
@@ -51,9 +54,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -72,9 +73,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -93,9 +92,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -114,9 +111,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -135,9 +130,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -156,9 +149,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -177,9 +168,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -198,9 +187,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -219,9 +206,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -241,9 +226,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -263,9 +246,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -285,9 +266,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -307,9 +286,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -329,9 +306,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -351,9 +326,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -373,9 +346,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=BLUE)
-                e.set_description(
-                    '**Direct Link**: [waifu.im]({})'.format(url))
+                e = discord.Embed(color=BLUE, description='**Direct Link**: [waifu.im]({})'.format(url))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
