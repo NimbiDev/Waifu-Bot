@@ -1,5 +1,7 @@
 const prefix = process.env.PREFIX
 const client = require("../index.cjs");
+import chalk from "chalk";
+
 const {
     dependencies
 } = require('../package.json');
@@ -10,9 +12,7 @@ const {
 } = require('mongoose');
 
 client.on("ready", async () => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }
+
     setInterval(() => {
         client.user.setPresence({
             activities: [{
