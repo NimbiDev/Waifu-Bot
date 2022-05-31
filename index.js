@@ -7,6 +7,7 @@ const client = new Client({
         repliedUser: true,
         parse: ["users", "roles", "everyone"]
     },
+    intents: ['APPLICATION_COMMANDS']
 });
 
 
