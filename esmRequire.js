@@ -2,7 +2,7 @@
  * @file import compiled ES modules as a workaround
  */
 
- const esm = require('esm')
+ const chalk = require('chalk')
  const fs = require('fs')
  const Module = require('module')
  
@@ -10,19 +10,19 @@
  // Node: bypass [ERR_REQUIRE_ESM]
  const orig = Module._extensions['.js']
  Module._extensions['.js'] = function (module, filename) {
-   try {
-     return orig(module, filename)
-   } catch (e) {
-     if (e.code === 'ERR_REQUIRE_ESM') {
-       const content = fs.readFileSync(filename, 'utf8')
-       module._compile(content, filename)
+     try {
+         return orig(module, filename)
+     } catch (e) {
+         if (e.code === 'ERR_REQUIRE_ESM') {
+             const content = fs.readFileSync(filename, 'utf8')
+             module._compile(content, filename)
+         }
      }
-   }
  }
  
  const _esmRequire = esm(module, {
-   cjs: true,
-   mode: 'all',
+     cjs: true,
+     mode: 'all',
  })
  
  // don't pollute Module
@@ -30,5 +30,5 @@
  
  
  module.exports = function esmRequire(id) {
-   return _esmRequire(id)
+     return _esmRequire(id)
  }
