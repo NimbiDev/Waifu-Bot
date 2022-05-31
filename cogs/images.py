@@ -7,7 +7,7 @@ import random
 import json
         
 
-from config import DARKPINK, EMBED_THUMBNAIL, PREFIX, RED, GREEN, PREFIX, RANDOM, TENOR_API
+from config import BLUE, EMBED_THUMBNAIL, PREFIX, RED, GREEN, PREFIX, RANDOM, TENOR_API
 from discord.ext import commands
 
 TOKENS = {'TENOR_API': TENOR_API}
@@ -37,7 +37,7 @@ class Images(commands.Cog, name='Image Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=str(DARKPINK))
+                e = discord.Embed(color=BLUE)
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
@@ -51,7 +51,7 @@ class Images(commands.Cog, name='Image Commands'):
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def tenor(self, ctx, *, query):
         tenorUrl = await TENOR.arandom(str(query))
-        e = discord.Embed(colour=RANDOM)
+        e = discord.Embed(colour=BLUE)
         e.set_image(url=tenorUrl)
         await ctx.send(embed=e, mention_author=False)
 
