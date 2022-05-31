@@ -1,6 +1,6 @@
-import { Client } from discord.js;
-import { glob } from glob;
-import chalk from chalk;
+import { Client } from "discord.js";
+import { glob } from "glob";
+import chalk from "chalk";
 const { promisify } = require('util');
 const globPromise = promisify(glob);
 

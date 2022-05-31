@@ -1,4 +1,4 @@
-import { Client, CommandInteraction, MessageEmbed } from discord.js;
+import { Client, CommandInteraction, MessageEmbed } from "discord.js";
 
 module.exports = {
     name: 'ping',

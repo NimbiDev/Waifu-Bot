@@ -1,4 +1,4 @@
-import { Client, CommandInteraction, MessageEmbed, MessageButton, MessageActionRow } from discord.js;
+import { Client, CommandInteraction, MessageEmbed, MessageButton, MessageActionRow } from "discord.js";
 
 module.exports = {
     name: 'about',

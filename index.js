@@ -4,7 +4,7 @@ config({ path: process.ENV })
 import {
     Collection,
     Client
-} from discord.js;
+} from "discord.js";
 
 
 const client = new Client({
