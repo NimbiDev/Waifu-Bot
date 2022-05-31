@@ -3,6 +3,7 @@
   "description": "Waifu Discord bot using waifu.im api",
   "version": "0.0.0.0",
   "main": "cluster.js",
+  "type": "module",
   "scripts": {
     "start": "node .",
     "dev": "nodemon cluster.js",
