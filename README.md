@@ -15,7 +15,7 @@ The `<>` flags represent **REQUIRED** arguments. <br w.>
 | tenor | Retreieve a random gif by tag from tenor. Seperate multiple tags with `+`. | w.tenor <tag> |
 | guess | Guess a number between 1 and 10 | w.guess <number> |
 | ping | Returns the bot's latency. | w.ping |
-| waifu | Get a random waifu from waifu.im | w.waifu <tag> |
+| waifu | Get a random waifu from waifu.im | w.waifu [subcommand] [gif] |
 
 ## Additional Information
  * [Available Tags](https://github.com/Socket-Development/Waifu-Bot/wiki/Available-Tags)
