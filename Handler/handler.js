@@ -7,7 +7,9 @@ import chalk from 'chalk';
  */
 
 export default async (client) => {
-    const globPromise = promisify(glob);
+    const globPromise = promisify(glob)
+    
+    // Legacy Comand Handler
     const LegacyCommands = await globPromise(`${process.cwd()}/commands/*/*.js`);
     LegacyCommands.map(async (path) => {
         const file = require(path);
@@ -29,8 +31,9 @@ export default async (client) => {
         }
     });
 
+    // Slash Commands Handler
     const slashCommands = [];
-    const SlashCommandsFiles = await globPromise(`${process.cwd()}/slashCommands/*/*.js`);
+    const SlashCommandsFiles = await globPromise(`${process.cwd()}/SlashCommands/*/*.js`);
     SlashCommandsFiles.map(async (path) => {
         const file = require(path);
         if (!file?.name) return
@@ -43,17 +46,18 @@ export default async (client) => {
         client.SlashCommands.set(file.name, files);
         slashCommands.push(file)
 
+
+
     });
-    client.on("ready", async () => {        
-        await client.application.commands.set(slashCommands)
-            .then(console.log(
-                chalk.white(`✅ Successfully Registered`), chalk.red(client.SlashCommands.size),
-                chalk.white('Slash Commands in'), chalk.red(client.guilds.cache.size),
-                chalk.white(`${client.guilds.cache.size > 1 ? "Guilds" : "Guild"}`
-                )
-            ))
+    client.on("ready", async () => {
+        // Slash Commands for a single guild 
+        await client.guilds.cache.get(process.env.GUILD_ID).commands.set(slashCommands).then(console.log(chalk.white(`✅ Successfully Registered`), chalk.red(client.SlashCommands.size), chalk.white('Slash Commands in'), chalk.red(client.guilds.cache.size), chalk.white(`${client.guilds.cache.size > 1 ? "Guilds" : "Guild"}`)));
+
+        // Slash Commands for all the guilds
+        // await client.application.commands.set(slashCommands).then(console.log(chalk.white(`✅ Successfully Registered`), chalk.red(client.SlashCommands.size), chalk.white('Slash Commands in'), chalk.red(client.guilds.cache.size), chalk.white(`${client.guilds.cache.size > 1 ? "Guilds" : "Guild"}`)))
     });
-    
+
+    // Events Handler
     const eventFiles = await globPromise(`${process.cwd()}/Events/*.js`);
     eventFiles.map(async (filePaths) => require(filePaths));
 }
