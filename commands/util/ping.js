@@ -1,13 +1,14 @@
-import {
+const {
     Client,
     Message,
     String,
     MessageEmbed
-} from 'discord.js';
+} = require('discord.js');
 
-export default {
+module.exports = {
     name: 'ping',
     description: 'Check Bots ping',
+    aliases: ['echo'],
     /**
      * @param {Client} client 
      * @param {Message} message 
@@ -16,7 +17,7 @@ export default {
      */
     run: async (client, message, args) => {
         const embed = new MessageEmbed()
-            .setColor('RED')
+            .setColor('DARK_PINK')
             .setDescription(`**Client's Ping**: \` ${client.ws.ping}ms \`\n**Message Ping**: \` ${Date.now() - message.createdTimestamp}ms\``)
 
         message.reply({

@@ -1,6 +1,12 @@
-import { Client, CommandInteraction, MessageEmbed } from "discord.js";
+const {
+    Client,
+    CommandInteraction,
+    String,
+    MessageEmbed
+} = require('discord.js');
 
-export default {
+
+module.exports = {
     name: 'uptime',
     description: 'Check Bots uptime',
     /** 

@@ -1,7 +1,7 @@
-import client from '../index.js'
-import { owners } from '../json/owners.json'
-import { developers } from '../json/developers.json';
-
+const client = require("../index"); // Importing Client from Index.js
+const {
+    owners
+} = require('../json/owners.json'); // Get the owner ids
 const prefix = process.env.PREFIX;
 
 client.on("messageCreate", async (message) => {

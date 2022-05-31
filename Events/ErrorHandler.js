@@ -1,7 +1,11 @@
-import client from '../index.js'; 
-import chalk from 'chalk';
-import { MessageEmbed } from 'discord.js';
-import { inspect } from "util";
+const client = require("../index"); // Importing Client from Index.js
+const chalk = require("chalk"); // Importing Chalk from Chalk
+const {
+    MessageEmbed
+} = require('discord.js') // Importing MessageEmbed from Discord.js
+const {
+    inspect
+} = require("util")
 
 client.on('error', err => {
     const a = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
@@ -12,8 +16,8 @@ client.on('error', err => {
         .setTitle('Error')
         .setURL('https://discordjs.guide/popular-topics/errors.html#api-errors')
         .setColor('#2F3136')
-        .setDescription(`\`\`\`${inspect(error, { depth: 0 })}\`\`\``)
-
+        .setDescription(`\`\`\`${inspect(error, {depth: 0})}\`\`\``)
+        
         .setTimestamp()
     return a.send({
         embeds: [ErrorEmbed]
@@ -31,7 +35,7 @@ process.on("unhandledRejection", (reason, p) => {
         .setColor('#2F3136')
         .addField('Reason', `\`\`\`${inspect(reason, { depth: 0 })}\`\`\``.substring(0, 1000))
         .addField('Promise', `\`\`\`${inspect(p, { depth: 0 })}\`\`\``.substring(0, 1000))
-
+        
         .setTimestamp()
     return b.send({
         embeds: [unhandledRejectionEmbed]
@@ -49,7 +53,7 @@ process.on("uncaughtException", (err, origin) => {
         .setURL('https://nodejs.org/api/process.html#event-uncaughtexception')
         .addField('Error', `\`\`\`${inspect(err, { depth: 0 })}\`\`\``.substring(0, 1000))
         .addField('Origin', `\`\`\`${inspect(origin, { depth: 0 })}\`\`\``.substring(0, 1000))
-
+        
         .setTimestamp()
     return c.send({
         embeds: [uncaughtExceptionEmbed]
@@ -67,7 +71,7 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
         .setURL('https://nodejs.org/api/process.html#event-uncaughtexceptionmonitor')
         .addField('Error', `\`\`\`${inspect(err, { depth: 0 })}\`\`\``.substring(0, 1000))
         .addField('Origin', `\`\`\`${inspect(origin, { depth: 0 })}\`\`\``.substring(0, 1000))
-
+        
         .setTimestamp()
 
     return d.send({
@@ -87,7 +91,7 @@ process.on("multipleResolves", (type, promise, reason) => {
         .addField('Type', `\`\`\`${inspect(type, { depth: 0 })}\`\`\``.substring(0, 1000))
         .addField('Promise', `\`\`\`${inspect(promise, { depth: 0 })}\`\`\``.substring(0, 1000))
         .addField('Reason', `\`\`\`${inspect(reason, { depth: 0 })}\`\`\``.substring(0, 1000))
-
+        
         .setTimestamp()
     return e.send({
         embeds: [multipleResolvesEmbed]
@@ -104,7 +108,7 @@ process.on("warning", (warn) => {
         .setColor('#2F3136')
         .setURL('https://nodejs.org/api/process.html#event-warning')
         .addField('Warn', `\`\`\`${inspect(warn, { depth: 0 })}\`\`\``.substring(0, 1000))
-
+        
         .setTimestamp()
     return f.send({
         embeds: [warningEmbed]

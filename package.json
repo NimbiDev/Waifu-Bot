@@ -36,11 +36,9 @@
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
     "glob": "^7.2.0",
-    "mongoose": "^6.2.0",
-    "esm": "^3.2.25"
+    "mongoose": "^6.2.0"
   },
   "devDependencies": {
-    "chalk": "^5.0.1",
     "eslint": "^8.16.0",
     "nodemon": "^2.0.16"
   }

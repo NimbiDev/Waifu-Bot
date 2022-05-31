@@ -1,12 +1,14 @@
-import chalk from 'chalk'; // Importing chalk from chalk
-import client from '../index.js'; // Importing Client from Index.js
-import { dependencies } from '../package.json'; // Importing dependencies from package.json
-
+const chalk = require('chalk'); // Importing chalk from chalk
 const prefix = process.env.PREFIX // Getting the Prefix
+const client = require("../index"); // Importing Client from Index.js
+const {
+    dependencies
+} = require('../package.json'); // Requiring dependencies from package.json
 const ver = dependencies['discord.js']; // Getting the Version of Discord.js
 const mongooseConnectionString = process.env.MONGO_CONNECTION_URL; // Mongo Connection String
-
-import { connect } from 'mongoose';
+const {
+    connect
+} = require('mongoose'); // Getting Connect from Mongoose
 
 client.on("ready", async () => {
     // Presence

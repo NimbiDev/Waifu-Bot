@@ -1,13 +1,14 @@
-import {
+const {
     Client,
     Message,
     String,
     MessageEmbed
-} from 'discord.js';
+} = require('discord.js');
 
-export default {
+module.exports = {
     name: 'uptime',
     description: 'Check Bots uptime',
+    aliases: ['status'],
     /**
      * @param {Client} client 
      * @param {Message} message 

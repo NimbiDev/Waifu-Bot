@@ -1,14 +1,19 @@
-import { Client } from 'discord.js';
-import glob from 'glob';
-import promisify from 'util';
-import chalk from 'chalk';
+const {
+    Client
+} = require('discord.js'); // Importing Client from discord.js module
+const {
+    glob
+} = require('glob'); // Importing Glob from glob
+const {
+    promisify
+} = require('util'); // Importing promisify from util
+const globPromise = promisify(glob);
+const chalk = require('chalk')
+
 /**
  * @param {Client} client
  */
-
-export default async (client) => {
-    const globPromise = promisify(glob)
-    
+module.exports = async (client) => {
     // Legacy Comand Handler
     const LegacyCommands = await globPromise(`${process.cwd()}/commands/*/*.js`);
     LegacyCommands.map(async (path) => {
