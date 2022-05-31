@@ -22,7 +22,7 @@ class Waifu(commands.Cog, name='Waifu Commands'):
     def cog_unload(self):
         self.client.loop.create_task(self.session.close())
 
-    @commands.group(name='waifu', description='Get a waifu image from waifu.im', command_attrs=command_attrs)
+    @commands.group(name='waifu', description='Get a waifu image from waifu.im.\n\n**Usage**: `w.waifu [subcommand]`\n**Example**: `w.waifu random`', command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     async def _waifu(self, ctx):
         if ctx.author.id == self.client.user.id:
