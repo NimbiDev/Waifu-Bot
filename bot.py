@@ -11,7 +11,7 @@ from discord.ext import commands
 
 from typing import List
 
-activity = discord.Playing(name='{}help'.format(PREFIX))
+activity = discord.Game(name='{}help'.format(PREFIX))
 
 client = commands.Bot(
     command_prefix=('{}'.format(PREFIX)),
