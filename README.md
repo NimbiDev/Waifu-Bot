@@ -16,3 +16,7 @@ The `<>` flags represent **REQUIRED** arguments. <br />
 | shop | Display the guild shop, or buy useful items from the guild shop | /shop [item] |
 | daily | Collect your daily Waifu Tokens | /daily |
 | battle | Battle your waifu against other guild members and build up your waifu's respect | /battle [@user] |
+
+## Additional Information
+ * [Available Tags](https://github.com/Socket-Development/Waifu-Bot/wiki/Available-Tags)
+ * [Waifu.im](https://waifu.im/)
