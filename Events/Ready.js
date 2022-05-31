@@ -1,24 +1,25 @@
-const chalk = require('chalk'); // Importing chalk from chalk
-const prefix = process.env.PREFIX // Getting the Prefix
-const client = require("../index"); // Importing Client from Index.js
+const prefix = process.env.PREFIX
+const client = require("../index");
 const {
     dependencies
-} = require('../package.json'); // Requiring dependencies from package.json
-const ver = dependencies['discord.js']; // Getting the Version of Discord.js
-const mongooseConnectionString = process.env.MONGO_CONNECTION_URL; // Mongo Connection String
+} = require('../package.json');
+const ver = dependencies['discord.js'];
+const mongooseConnectionString = process.env.MONGO_CONNECTION_URL;
 const {
     connect
-} = require('mongoose'); // Getting Connect from Mongoose
+} = require('mongoose');
 
 client.on("ready", async () => {
-    // Presence
+    async function chalk() {
+        return (await import("chalk")).default;
+    }
     setInterval(() => {
         client.user.setPresence({
             activities: [{
-                name: `${client.guilds.cache.size} Servers!`, // Status will show how many server the bot is in
-                type: 'WATCHING' // You change it to "STREAMING" or "PLAYING" or "LISTENING"
+                name: `${client.guilds.cache.size} Servers!`,
+                type: 'WATCHING'
             }],
-            status: 'online' // Bot status
+            status: 'online'
         });
     }, 60000)
 

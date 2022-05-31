@@ -17,7 +17,7 @@ module.exports = {
         let seconds = Math.floor(totalSeconds % 60);
 
         const EMBED = new Discord.MessageEmbed()
-            .setColor("RED")
+            .setColor("DARK_PINK")
             .setTimestamp()
             .setDescription(`**Uptime**: \` ${days} Day(s), ${hours} Hour(s), ${minutes} Minute(s), ${seconds} Second(s) \``)
 
