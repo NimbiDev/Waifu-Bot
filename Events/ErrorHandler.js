@@ -1,3 +1,4 @@
+import chalk from chalk;
 const client = require("../index");
 
 const {
@@ -8,6 +9,7 @@ const {
 } = require("util")
 
 client.on('error', err => {
+
     const a = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[ERROR]——————————\n') + err
@@ -24,9 +26,7 @@ client.on('error', err => {
     })
 });
 process.on("unhandledRejection", (reason, p) => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }
+
     const b = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Unhandled Rejection/Catch]——————————\n'),
@@ -45,9 +45,7 @@ process.on("unhandledRejection", (reason, p) => {
     })
 });
 process.on("uncaughtException", (err, origin) => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }
+
     const c = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Uncaught Exception/Catch]——————————\n'),
@@ -66,9 +64,7 @@ process.on("uncaughtException", (err, origin) => {
     })
 });
 process.on("uncaughtExceptionMonitor", (err, origin) => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }
+
     const d = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Uncaught Exception/Catch (MONITOR)]——————————\n'),
@@ -88,9 +84,7 @@ process.on("uncaughtExceptionMonitor", (err, origin) => {
     })
 });
 process.on("multipleResolves", (type, promise, reason) => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }    
+  
     const e = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Multiple Resolves]——————————\n'),
@@ -110,9 +104,7 @@ process.on("multipleResolves", (type, promise, reason) => {
     })
 });
 process.on("warning", (warn) => {
-    async function chalk() {
-        return (await import("chalk")).default;
-    }
+
     const f = client.channels.cache.get(process.env.ERROR_LOG_CHANNEL)
     console.log(
         chalk.yellow('——————————[Warning]——————————\n'),
