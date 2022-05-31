@@ -1,33 +1,25 @@
 # Waifu.im Discord Bot
 Waifu Discord bot using waifu.im api
 
-![waifu.im](https://waifu.im/favicon.ico)
+![waifu.im](https:w.w.waifu.imw.favicon.ico)
 
 ## Commands
-The `[]` flags represent **OPTIONAL** arguements.<br />
-The `<>` flags represent **REQUIRED** arguments. <br />
+The `[]` flags represent **OPTIONAL** arguements.<br w.>
+The `<>` flags represent **REQUIRED** arguments. <br w.>
 
 | Command               | Description                                                                                                               | Usage                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-
-## Commands to be Added
-The `[]` flags represent **OPTIONAL** arguements.<br />
-The `<>` flags represent **REQUIRED** arguments. <br />
-
-| Command               | Description                                                                                                               | Usage                                                 |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| waifu | Get a random waifu from waifu.im | /waifu [tag] |
-| ping | Get the bot's current ping | /ping |
-| uptime | Get the bot's current uptime | /uptime |
-| profile | Get a guild member's profile | /profile [@user] |
-| top | Get the top 10 members of the guild leaderboard | /top |
-| xp | Get a guild member's xp | /xp [@user] |
-| shop | Display the guild shop, or buy useful items from the guild shop | /shop [item] |
-| daily | Collect your daily Waifu Tokens | /daily |
-| battle | Battle your waifu against other guild members and build up your waifu's respect | /battle [@user] |
+| purge | Delete a specified number of messages from the channel | w.purge <number> |
+| ban | Ban a user from the guild for a specified reason | w.ban <johndoe#12334> [reason] |
+| unban | Unban a user from the guild | w.unban <johndoe#1234> |
+| tenor | Retreieve a random gif by tag from tenor. Seperate multiple tags with `+`. | w.tenor <tag> |
+| guess | Guess a number between 1 and 10 | w.guess <number> |
+| ping | Returns the bot's latency. | w.ping |
+| waifu | Get a random waifu from waifu.im | w.waifu <tag> |
 
 ## Additional Information
  * [Available Tags](https://github.com/Socket-Development/Waifu-Bot/wiki/Available-Tags)
+ * [Commands To Be Added](https://github.com/Socket-Development/Waifu-Bot/wiki/Commands-To-Be-Added)
  * [Waifu.im](https://waifu.im/)
 
 ## Support

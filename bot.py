@@ -11,7 +11,7 @@ from discord.ext import commands
 
 from typing import List
 
-activity = discord.Streaming(name='with cogs | {}help'.format(PREFIX), url='https://twitch.tv/{}'.format(TWITCH))
+activity = discord.Playing(name='{}help'.format(PREFIX))
 
 client = commands.Bot(
     command_prefix=('{}'.format(PREFIX)),
