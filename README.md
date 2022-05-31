@@ -1,6 +1,8 @@
 # Waifu.im Discord Bot
 Waifu Discord bot using waifu.im api
 
+![waifu.im](https://cdn.waifu.im/d717f17d3f0adad0.jpg)
+
 ## Commands
 The `[]` flasg represent **OPTIONAL** arguements.<br />
 The `<>` flags represent **REQUIRED** arguments. <br />
