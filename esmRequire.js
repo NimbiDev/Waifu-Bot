@@ -32,4 +32,4 @@ Module._extensions['.js'] = orig
 module.exports = function esmRequire(id) {
     return _esmRequire(id)
 }
-require('index.js')
+require('./index.js')
