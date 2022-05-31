@@ -2,7 +2,6 @@ const { Client } = require('discord.js');
 const { glob } = require('glob');
 const { promisify } = require('util');
 const globPromise = promisify(glob);
-const chalk = require('chalk');
 
 /**
  * @param {Client} client
@@ -25,6 +24,9 @@ module.exports = async (client) => {
 
     });
     client.on("ready", async () => {
+        async function chalk() {
+            return (await import("chalk")).default;
+        }
         await client.application.commands.set(slashCommands)
             .then(console.log(
                 chalk.white(`✅ Successfully Registered`), chalk.red(client.SlashCommands.size),
