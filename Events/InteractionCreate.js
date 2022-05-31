@@ -1,6 +1,4 @@
-
-import "../index.js";
-
+import client from '../imports.cjs';
 const {
     owners
 } = require('../json/owners.json');
