@@ -37,7 +37,7 @@ class Images(commands.Cog, name='Image Commands'):
             api = await resp.json()
             if resp.status in {200, 201}:
                 url = api['images'][0]['url']
-                e = discord.Embed(color=DARKPINK)
+                e = discord.Embed(color=str(DARKPINK))
                 e.set_image(url='{}'.format(url))
                 await ctx.send(embed=e)
             else:
