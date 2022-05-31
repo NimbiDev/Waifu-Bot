@@ -15,8 +15,6 @@ const client = new Client({
     intents: 513,
 });
 
-export default client;
-
 client.SlashCommands = new Collection();
 
 import './Handler/handler.js';
