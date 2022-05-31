@@ -26,7 +26,7 @@ class Images(commands.Cog, name='Image Commands'):
     def cog_unload(self):
         self.client.loop.create_task(self.session.close())
 
-    @commands.command(aliases=['w'], name='waifu', description='Get a random waifu by tag from waifu.im.\n\n**Example**: {}waifu maid'.format(PREFIX), command_attrs=command_attrs)
+    @commands.command(aliases=['w'], name='waifu', description='Get a random waifu by tag from waifu.im.\n\n**Example**: `{}waifu maid`'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def _waifu(self, ctx, *, tag):
