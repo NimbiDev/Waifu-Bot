@@ -1,6 +1,10 @@
-const { Collection, Client } = require("discord.js");
+
 require("dotenv").config();
 
+const { 
+    Collection, 
+    Client 
+} = require("discord.js");
 
 const client = new Client({
     allowedMentions: {
@@ -19,4 +23,4 @@ client.SlashCommands = new Collection();
 
 require('./Handler/handler')(client);
 
-client.logon(process.env.TOKEN)
+client.login(process.env.TOKEN)
