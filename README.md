@@ -4,7 +4,7 @@ Waifu Discord bot using waifu.im api
 ![waifu.im](https://cdn.waifu.im/d717f17d3f0adad0.jpg)
 
 ## Commands
-The `[]` flasg represent **OPTIONAL** arguements.<br />
+The `[]` flags represent **OPTIONAL** arguements.<br />
 The `<>` flags represent **REQUIRED** arguments. <br />
 
 | Command               | Description                                                                                                               | Usage                                                 |
@@ -22,3 +22,6 @@ The `<>` flags represent **REQUIRED** arguments. <br />
 ## Additional Information
  * [Available Tags](https://github.com/Socket-Development/Waifu-Bot/wiki/Available-Tags)
  * [Waifu.im](https://waifu.im/)
+
+## Support
+ * [Discord](https://discord.me/socket-development)
