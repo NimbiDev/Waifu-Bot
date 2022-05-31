@@ -1,8 +1,10 @@
-require("dotenv").config;
-const {
+import { config } from "dotenv"
+dotenv.config();
+
+import {
     Collection,
     Client
-} = require("discord.js");
+} from "discord.js";
 
 
 const client = new Client({
@@ -14,12 +16,13 @@ const client = new Client({
 });
 
 
+import client from './Handler/handler';
+
 module.exports = client;
 
 client.commands = new Collection();
 client.aliases = new Collection();
 client.SlashCommands = new Collection();
 
-require('./Handler/handler')(client);
 
 client.login(process.env.TOKEN)

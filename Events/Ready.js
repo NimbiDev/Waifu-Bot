@@ -1,5 +1,5 @@
 const prefix = process.env.PREFIX
-const client = require("../index.cjs");
+const client = require("../index.js");
 import chalk from "chalk";
 
 const {
