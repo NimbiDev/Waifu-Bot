@@ -6,7 +6,7 @@ import asyncio
 import logging
 import chalk
 
-from config import EMBED_THUMBNAIL, PREFIX, TOKEN, TWITCH, BLUE, GITHUB_REPO, CLIENT_VERSION
+from config import EMBED_THUMBNAIL, PREFIX, TOKEN, TWITCH, BLUE, GITHUB_REPO, CLIENT_VERSION, DEV_TEAM, CLIENT_NAME
 from discord.ext import commands
 
 from typing import List
@@ -15,7 +15,7 @@ activity = discord.Game(name='{}help'.format(PREFIX))
 
 client = commands.Bot(
     command_prefix=('{}'.format(PREFIX)),
-    description='Multi-purpose Discord bot ready to skill up and boost your server.\n\n**Version**: {}\n**Repo**: [DevCorner-Github/Faestine]({})'.format(CLIENT_VERSION, GITHUB_REPO),
+    description='Multi-purpose Discord bot ready to skill up and boost your server.\n\n**Version**: {}\n**Repo**: [{}/{}]({})'.format(CLIENT_VERSION, DEV_TEAM, CLIENT_NAME, GITHUB_REPO),
     activity=activity,
     status=discord.Status.online
 )
