@@ -1,6 +1,6 @@
 import { Client, CommandInteraction, MessageEmbed, MessageButton, MessageActionRow } from "discord.js";
 
-module.exports = {
+export default {
     name: 'about',
     description: 'Responds with information about the bot.',
     /** 

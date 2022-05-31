@@ -5,7 +5,7 @@ import chalk from 'chalk';
  * @param {Client} client
  */
 
-module.exports = async (client) => {
+export default async (client) => {
     const slashCommands = [];
     const SlashCommandsFiles = await glob.promise(`${process.cwd()}/slashCommands/*/*.js`);
     SlashCommandsFiles.map(async (path) => {
