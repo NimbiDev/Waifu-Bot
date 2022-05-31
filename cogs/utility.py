@@ -1,7 +1,7 @@
 import discord
 import asyncio
 
-from config import BLUE, EMBED_THUMBNAIL, GOLD, PREFIX, RED, GREEN
+from config import DARKPINK, EMBED_THUMBNAIL, GOLD, PREFIX, RED, GREEN
 from discord.ext import commands
 
 command_attrs = {'hidden': False}
