@@ -4,7 +4,7 @@ Waifu Discord bot using waifu.im api
 ## Commands
 The `[]` flasg represent **OPTIONAL** arguements.<br />
 The `<>` flags represent **REQUIRED** arguments. <br />
-| --------------------- | 
+
 | Command               | Description                                                                                                               | Usage                                                 |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
 | waifu | Get a random waifu from waifu.im | /waifu [tag] |
