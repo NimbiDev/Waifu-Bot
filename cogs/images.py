@@ -26,42 +26,25 @@ class Images(commands.Cog, name='Image Commands'):
     def cog_unload(self):
         self.client.loop.create_task(self.session.close())
 
-    @commands.command(name='waifu', description='Get a random waifu by tag from waifu.im.\n\n**Example**: {}waifu miad'.format(PREFIX), command_attrs=command_attrs)
+    @commands.command(name='waifu', description='Get a random waifu by tag from waifu.im.\n\n**Example**: {}waifu maid'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True)
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def _waifu(self, ctx, *, args):
         if ctx.author.id == self.client.user.id:
             return
-
-        if (args):
-            url = 'https://api.waifu.im/random/?{}=true'.format(args)
-            async with session.get(url, headers=HEADERS) as resp:
-                api = await resp.json()
-                if resp.status in {200, 201}:
-                    url = api['images'][0]['url']
-                    e = discord.Embed(color=BLUE)
-                    e.set_image(url='{}'.format(url))
-                    await ctx.send(embed=e)
-                else:
-                    error = api['detail']
-                    e = discord.Embed(color=RED)
-                    e.set_description('```js\n{}\n```'.format(error))
-                    await ctx.send(embed=e)
-        else:
-            session = aiohttp.ClientSession()
-            url = 'https://api.waifu.im/random/'
-            async with session.get(url, headers=HEADERS) as resp:
-                api = await resp.json()
-                if resp.status in {200, 201}:
-                    url = api['images'][0]['url']
-                    e = discord.Embed(color=BLUE)
-                    e.set_image(url='{}'.format(url))
-                    await ctx.send(embed=e)
-                else:
-                    err = api['detail']
-                    e = discord.Embed(color=RED)
-                    e.set_description('```js\n{}\n```'.format(err))
-                    await ctx.send(embed=e)
+        url = 'https://api.waifu.im/random/?{}=true'.format(args)
+        async with self.session.get(url, headers=HEADERS) as resp:
+            api = await resp.json()
+            if resp.status in {200, 201}:
+                url = api['images'][0]['url']
+                e = discord.Embed(color=BLUE)
+                e.set_image(url='{}'.format(url))
+                await ctx.send(embed=e)
+            else:
+                error = api['detail']
+                e = discord.Embed(color=RED)
+                e.set_description('```js\n{}\n```'.format(error))
+                await ctx.send(embed=e)
     
     @commands.command(aliases=['gif'], description='Return a random gif by tag from tenor.\nSeperate multiple tags with `+`.\n\n**Example**: `{}tenor anime+hug`'.format(PREFIX), command_attrs=command_attrs)
     @commands.has_guild_permissions(send_messages=True, embed_links=True)
