@@ -1,10 +1,11 @@
 import { config } from "dotenv";
 config({ path: process.ENV })
 
-const {
+import {
     Collection,
     Client
-} = require("discord.js");
+} from discord.js;
+
 
 const client = new Client({
     allowedMentions: {

@@ -1,11 +1,11 @@
-const { Discord } = require('discord.js');
+import { Client, CommandInteraction, MessageEmbed } from discord.js;
 
 module.exports = {
     name: 'uptime',
     description: 'Check Bots uptime',
     /** 
-     * @param {Discord.Client} client 
-     * @param {Discord.CommandInteraction} interaction
+     * @param {Client} client 
+     * @param {CommandInteraction} interaction
      */
     run: async (client, interaction) => {
         let totalSeconds = (client.uptime / 1000);
@@ -16,7 +16,7 @@ module.exports = {
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = Math.floor(totalSeconds % 60);
 
-        const EMBED = new Discord.MessageEmbed()
+        const EMBED = new MessageEmbed()
             .setColor("DARK_PINK")
             .setTimestamp()
             .setDescription(`**Uptime**: \` ${days} Day(s), ${hours} Hour(s), ${minutes} Minute(s), ${seconds} Second(s) \``)

@@ -1,11 +1,11 @@
-const { Discord } = require('discord.js');
+import { Client, CommandInteraction, MessageEmbed } from discord.js;
 
 module.exports = {
     name: 'waifu',
     description: 'Get a waifu from waifu.im with an optional tag. eg: /waifu maid',
     /** 
-     * @param {Discord.Client} client 
-     * @param {Discord.CommandInteraction} interaction
+     * @param {Client} client 
+     * @param {CommandInteraction} interaction
      */
     run: async (client, interaction) => {
         if (!tag) {
@@ -13,7 +13,7 @@ module.exports = {
             const DATA = await REQUEST.json();
             const URL = DATA['images'][0]['url'];
 
-            const EMBED = new Discord.Embed()
+            const EMBED = new MessageEmbed()
                 .setDescription('**Direct Link**: [waifu.im](' + URL + ')')
                 .setImage({ url: String(URL) })
                 .setColor('DARK_PINK');
@@ -24,7 +24,7 @@ module.exports = {
             const DATA = await REQUEST.json();
             const URL = DATA['images'][0]['url'];
 
-            const EMBED = new Discord.Embed()
+            const EMBED = new MessageEmbed()
                 .setDescription('**Direct Link**: [waifu.im](' + URL + ')')
                 .setImage({ url: String(URL) })
                 .setColor('DARK_PINK');
