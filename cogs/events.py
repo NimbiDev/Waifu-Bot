@@ -42,12 +42,7 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
 
         if isinstance(error, commands.CommandNotFound):
             return
-        else:
-            e = discord.Embed(
-                description=error_message,
-                color=DARKRED
-            )
-            await ctx.send(embed=e, mention_author=False)
+        else: 
             print(chalk.yellow(f'>>| {error}'))
             # Uncommit the below line when debugging
             # raise error
