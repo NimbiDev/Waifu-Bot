@@ -15,13 +15,6 @@ const client = new Client({
     intents: 513,
 });
 
-module.exports = client;
-
-client.commands = new Collection();
-client.aliases = new Collection();
-client.SlashCommands = new Collection();
-
-import './Handler/handler';
-
+import "client.cjs";
 
 client.login(process.env.TOKEN)
