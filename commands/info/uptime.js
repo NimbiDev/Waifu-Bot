@@ -1,13 +1,20 @@
-import { Client, CommandInteraction, MessageEmbed } from "discord.js";
+import {
+    Client,
+    Message,
+    String,
+    MessageEmbed
+} from 'discord.js';
 
 export default module.exports = {
     name: 'uptime',
     description: 'Check Bots uptime',
-    /** 
+    /**
      * @param {Client} client 
-     * @param {CommandInteraction} interaction
+     * @param {Message} message 
+     * @param {String} args 
+     * @returns 
      */
-    run: async (client, interaction) => {
+    run: async (client, message, args) => {
         let totalSeconds = (client.uptime / 1000);
         let days = Math.floor(totalSeconds / 86400);
         totalSeconds %= 86400;
@@ -16,11 +23,13 @@ export default module.exports = {
         let minutes = Math.floor(totalSeconds / 60);
         let seconds = Math.floor(totalSeconds % 60);
 
-        const EMBED = new MessageEmbed()
+        const embed = new MessageEmbed()
             .setColor("DARK_PINK")
             .setTimestamp()
             .setDescription(`**Uptime**: \` ${days} Day(s), ${hours} Hour(s), ${minutes} Minute(s), ${seconds} Second(s) \``)
 
-        interaction.reply({ embeds: [EMBED] });
+        message.reply({
+            embeds: [embed]
+        });
     }
 }

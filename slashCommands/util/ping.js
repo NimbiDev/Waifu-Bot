@@ -1,6 +1,6 @@
 import { Client, CommandInteraction, MessageEmbed } from "discord.js";
 
-export default {
+export default  module.exports = {
     name: 'ping',
     description: 'Check Bots ping',
     /** 
