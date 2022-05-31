@@ -33,5 +33,5 @@ GREEN = discord.Color.green()
 DARKRED = discord.Color.dark_red()
 DARKBLUE = discord.Color.dark_blue()
 DARKGOLD = discord.Color.dark_gold()
-PINK = discord.Color.pink()
-DARKPINK, = discord.Color.dark_pink()
+PINK = '#ff99ff'
+DARKPINK, = '#ff1ac6'
