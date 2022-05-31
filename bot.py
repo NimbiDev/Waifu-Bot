@@ -6,7 +6,7 @@ import asyncio
 import logging
 import chalk
 
-from config import EMBED_THUMBNAIL, PREFIX, TOKEN, TWITCH, DARKPINK, GITHUB_REPO, CLIENT_VERSION
+from config import EMBED_THUMBNAIL, PREFIX, TOKEN, TWITCH, BLUE, GITHUB_REPO, CLIENT_VERSION
 from discord.ext import commands
 
 from typing import List
@@ -28,7 +28,7 @@ class Help(commands.Cog):
 class CustomHelp(commands.MinimalHelpCommand):
     async def send_pages(self):
         destination = self.get_destination()
-        embed = discord.Embed(color=DARKPINK, description='')
+        embed = discord.Embed(color=BLUE, description='')
         embed.set_thumbnail(url='{}'.format(EMBED_THUMBNAIL))
         for page in self.paginator.pages:
             embed.description += page

@@ -6,7 +6,7 @@ import random
 import aiohttp
 
 
-from config import DARKPINK, EMBED_THUMBNAIL, PREFIX, RED, GREEN
+from config import BLUE, EMBED_THUMBNAIL, PREFIX, RED, GREEN
 from discord.ext import commands
 
 command_attrs = {'hidden': False}
@@ -21,7 +21,7 @@ class Fun(commands.Cog, name='Fun Commands'):
         if ctx.author.id == self.client.user.id:
             return
         
-        e = discord.Embed(color=DARKPINK)
+        e = discord.Embed(color=BLUE)
         e.add_field(name='Socket Guessing Game', value='Guess a number between **1** and **10**', inline=False)
         e.set_thumbnail(url='{}'.format(EMBED_THUMBNAIL))
         await ctx.send(embed=e)
