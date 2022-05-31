@@ -1,7 +1,7 @@
 # Waifu.im Discord Bot
 Waifu Discord bot using waifu.im api
 
-![waifu.im](https:w.w.waifu.imw.favicon.ico)
+![Logo](https://waifu.im/favicon.ico)
 
 ## Commands
 The `[]` flags represent **OPTIONAL** arguements.<br w.>
