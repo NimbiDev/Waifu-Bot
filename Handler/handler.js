@@ -1,7 +1,7 @@
 import { Client } from 'discord.js';
 import { glob } from 'glob';
 import { promisify } from 'util';
-import globPromise from promisify(glob);
+import globPromise from `${promisify(glob)}`;
 import chalk from 'chalk';
 /**
  * @param {Client} client
