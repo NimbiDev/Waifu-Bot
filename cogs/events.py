@@ -31,9 +31,9 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
 
         if isinstance(error, commands.CommandNotFound):
             return
-        else: 
-            print(chalk.yellow(f'>>| {error}'))
+        else:             
             await ctx.send(error_message)
+            print(chalk.yellow(f'>>| {error}'))
             # Uncommit the below line when debugging
             # raise error
 
