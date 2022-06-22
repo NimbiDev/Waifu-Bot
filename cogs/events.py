@@ -27,12 +27,22 @@ class Events(commands.Cog, name='Events', description='Events and triggeres that
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
 
-        error_message = '\⛔ {}'.format(error.args[0])         
+        error_message = '\⛔ {}'.format(error.args[0])
+
+        if isinstance(error, commands.errors.NSFWChannelRequired):
+            e = discord.Embed(
+                title="NSFW Command",
+                description=error_message,
+                color=DARKRED
+            )
+        await ctx.send(
+            embed=e,
+            mention_author=False
+        )
 
         if isinstance(error, commands.CommandNotFound):
             return
-        else:             
-            await ctx.send(error_message)
+        else: 
             print(chalk.yellow(f'>>| {error}'))
             # Uncommit the below line when debugging
             # raise error
