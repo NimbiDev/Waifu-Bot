@@ -21,7 +21,7 @@ class Fun(commands.Cog, name='Fun Commands'):
             return
         
         e = discord.Embed(color=BLUE)
-        e.add_field(name='Socket Guessing Game', value='Guess a number between **1** and **10**', inline=False)
+        e.add_field(name='Guessing Game', value='Guess a number between **1** and **10**', inline=False)
         e.set_thumbnail(url='{}'.format(EMBED_THUMBNAIL))
         await ctx.send(embed=e)
         
